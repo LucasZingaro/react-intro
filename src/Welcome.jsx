@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './style.module.css'
 
 class Welcome extends React.Component{
     constructor(props){
@@ -15,7 +16,7 @@ class Welcome extends React.Component{
     render(){
         const texto = <h1>Bem vindo, {this.props.name+this.state.lastName}</h1>
         return (
-            <div>
+            <div  className={css.title} >
                 {texto}
             </div>
         );

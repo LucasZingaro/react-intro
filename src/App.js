@@ -1,18 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+/* import logo from './logo.svg'; */
 import './App.css';
+import {BrowserRouter,Route} from 'react-router-dom';
 import Welcome from './Welcome';
 import Clock from './Clock';
-
 function App() {
   return (
-/*     React.createContext('div',{className:'App'},
-      React.createContext('div',{className:'App-header'},
-        React.createContext(Welcome,{name:'Render'})
-    )) */
-    <div className="App">
+    <BrowserRouter>
+      <Route path="/" component={Welcome} exact></Route>
+      <Route path="/clock" component={Clock}></Route>
+    </BrowserRouter>
+    /* <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+      {  { <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -23,12 +24,12 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a>} }
+        </div>
         <Welcome name='Lucas'></Welcome>
         <Clock></Clock>
       </header>
-      
-    </div>
+    </div> */
   );
   
 }
